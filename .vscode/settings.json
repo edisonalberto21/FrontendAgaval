@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/99fcb2af-55a3-443d-a67c-d53d0ad524d4/resourceGroups/Api120210409200157ResourceGroup/providers/Microsoft.Web/sites/eco-planet",
+    "appService.deploySubpath": "."
+}

@@ -1,0 +1,67 @@
+<div class="container mt-5" >
+    
+    <form [formGroup]="formularioCliente" action="" id="main">
+        <h2>{{tituloFormulario}}</h2>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label for="">Producto</label>
+                    <input type="text" class="form-control" formControlName="nombre" placeholder="Agregue el producto" >
+                    <div *ngIf="formularioCliente.controls['nombre'].invalid && formularioCliente.controls['nombre'].dirty" class="alert alert-danger" role="alert">
+                        <span *ngIf="formularioCliente.controls['nombre'].errors">Producto es requerido</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label for="">Precio</label>
+                    <input type="number" class="form-control" formControlName="precio" placeholder="Agregue el precio">
+                    <div *ngIf="formularioCliente.controls['precio'].invalid && formularioCliente.controls['precio'].dirty" class="alert alert-danger" role="alert">
+                        <span *ngIf="formularioCliente.controls['precio']">Precio es requerido</span>
+                    </div>
+                </div>
+            </div>
+           
+
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label for="">Stock</label>
+                    <input type="number" class="form-control" formControlName="stock" placeholder="Stock">
+                    <div *ngIf="formularioCliente.controls['stock'].invalid && formularioCliente.controls['stock'].dirty" class="alert alert-danger" role="alert">
+                        <span *ngIf="formularioCliente.controls['stock']">Stock</span>
+                    </div>
+                </div>
+            </div>
+           
+
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label for="">Imagen Url</label>
+                    <input type="text" class="form-control" formControlName="imgUrl" placeholder="Agregue la Url de Imagen">
+                    <div *ngIf="formularioCliente.controls['imgUrl'].invalid && formularioCliente.controls['imgUrl'].dirty" class="alert alert-danger" role="alert">
+                        <span *ngIf="formularioCliente.controls['imgUrl']">Imagen Url es requerido</span>
+                    </div>
+                </div>
+            </div>
+           
+
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label for="">Descripción</label>
+                    <input type="text" class="form-control" formControlName="descripcion" placeholder="Agregue la descripcion">
+                    <div *ngIf="formularioCliente.controls['descripcion'].invalid && formularioCliente.controls['descripcion'].dirty" class="alert alert-danger" role="alert">
+                        <span *ngIf="formularioCliente.controls['descripcion']">descripcion Url es requerido</span>
+                    </div>
+                </div>
+            </div>
+         <br/><br/>
+            <button *ngIf="!esEditable" [disabled]="formularioCliente.invalid" style="width: 30%;"  class="btn btn-primary elev"  (click)="agregar()">Agregar</button>
+            <button *ngIf="esEditable" [disabled]="formularioCliente.invalid" style="width: 30%;"  class="btn btn-danger elev"  (click)="editar()">Editar</button>
+       
+        </div>
+
+
+    </form>
+   
+</div>
+

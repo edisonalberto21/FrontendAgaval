@@ -1,0 +1,25 @@
+<section id="portfolio" class="portfolio section-bg">
+    <div class="container" id="main">
+
+      <div class="section-title">
+        <h2>Plantas Ornamentales y Flores Silvestres</h2>
+        <p>Una planta ornamental es aquella que se cultiva y se comercializa con propósitos decorativos por sus características estéticas, como las flores, hojas, perfume, la peculiaridad de su follaje, frutos o tallos en jardines y diseños paisajísticos, como planta de interior o para flor cortada</p>
+      </div>
+
+    
+
+      <div class="row portfolio-container aos-init aos-animate" data-aos="fade-up" data-aos-delay="100" style="position: relative; height: 822.702px;">
+
+        <div class="row"  style="position: absolute; left: 0px; top: 0px;">
+          <div class="portfolio-wrap col-lg-4 col-md-6 portfolio-item filter-app" style="height: 197px;"  *ngFor="let productos of producto">
+            <img [src]="productos.imgUrl" class="img-fluid" alt="">
+            <div class="portfolio-links">
+              <a [href]="productos.imgUrl" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
+              <a (click)="detalle(productos)" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    </div>
+  </section>

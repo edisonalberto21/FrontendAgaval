@@ -1,0 +1,15 @@
+<section id="main">
+<div class="row row-cols-1 row-cols-md-3 g-4 container" >
+    <div class="col"  *ngFor="let productos of producto">
+      <div class="card h-100">
+        <img [src]="productos.imgUrl" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{productos.nombre}}</h5>
+          <p class="card-text">{{productos.descripcion}}</p>
+          <a [routerLink]="['/agregar-productos/',productos.id]"  class="card-link">Editar</a>
+          <a (click)="eliminar(productos.id)" class="card-link text-danger" style="cursor: pointer;">Eliminar</a>
+        </div>
+      </div>
+    </div>
+ </div>
+</section>
